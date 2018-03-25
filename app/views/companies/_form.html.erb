@@ -1,38 +1,47 @@
-<form id="join_form" class="simform" autocomplete="off">
+<%= form_for :company, remote: true, html: { id: "join_form", class: "simform", autocomplete: "off" } do |f| %>
   <div class="simform-inner">
 
     <ol class="questions">
       <li>
-        <span><label for="q1">Startup name*</label></span>
-        <input id="q1" name="q1" type="text" data-validate="yes"/>
+        <span><label for="q1">What is the name of your startup? *</label></span>
+        <%= f.text_field :name, id: 'q1' %>
       </li>
       <li>
-        <span><label for="q2">Year founded*</label></span>
-        <input id="q2" name="q2" type="text" data-validate="yes"/>
+        <span><label for="q2">Tell us a little bit about it (max 250 characters).</label></span>
+        <%= f.text_field :description, id: 'q2' %> <!-- TODO text area / styles -->
       </li>
       <li>
-        <span><label for="q3">Web address*</label></span>
-        <input id="q3" name="q3" type="text" placeholder="http://" data-validate="yes"/>
+        <span><label for="q3">What's your startup's website address?</label></span>
+        <%= f.text_field :url, id: 'q3' %>
       </li>
       <li>
-        <span><label for="q4">Twitter handle</label></span>
-        <input id="q4" name="q4" type="text" placeholder="e.g., @wearesupernice"/>
+        <span><label for="q4">(social media)</label></span>
+        <%= f.text_field :facebook, id: 'q4' %>
+        <%= f.text_field :twitter, id: 'q4' %>
+        <%= f.text_field :instagram, id: 'q4' %>
+        <%= f.text_field :linked_in, id: 'q4' %>
       </li>
       <li>
         <span><label for="q5">URL to high resolution (preferably white) logo*</label></span>
-        <input id="q5" name="q5" type="text" placeholder="http://" data-validate="yes"/>
+        <%= f.text_field :logo_url, id: 'q5' %>
       </li>
       <li>
-        <span><label for="q6">Contact person* (their name will not be published)</label></span>
-        <input id="q6" name="q6" type="text" data-validate="yes"/>
+        <span><label for="q6">Who is the primary person of contact? (Their info will not be published.)</label></span>
+        <%= f.text_field :contact_name, id: 'q6' %>
+        <%= f.text_field :contact_email, id: 'q6' %>
+        <%= f.text_field :contact_phone, id: 'q6' %>
       </li>
+
+      <!-- TODO finish questions -->
+
       <li>
-        <span><label for="q7">email (optional, but nice to stay updated)</label></span>
-        <input id="q7" name="q7" type="email" data-validate=""/>
+        <span><label for="q7">...</label></span>
+        <%= f.text_field :address_street, id: 'q7' %>
       </li>
     </ol><!-- /questions -->
 
-    <button class="submit" type="submit">Join</button>
+    <%= f.submit 'Join', class: 'submit' %>
+    <!-- <button class="submit" type="submit">Join</button> -->
 
     <div class="controls">
       <button class="next"></button>
@@ -50,4 +59,5 @@
   </div><!-- /simform-inner -->
 
   <span class="final-message"></span>
-</form><!-- /simform -->
+
+<% end %>
