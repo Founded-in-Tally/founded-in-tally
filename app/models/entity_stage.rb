@@ -1,0 +1,2 @@
+class EntityStage < ApplicationRecord
+end
