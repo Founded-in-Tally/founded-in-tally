@@ -10,26 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180325031424) do
+ActiveRecord::Schema.define(version: 20180325044754) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "companies", force: :cascade do |t|
-    t.date "founded_year"
-    t.integer "employee_count"
-    t.boolean "raised_money"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "contributors", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -54,6 +41,9 @@ ActiveRecord::Schema.define(version: 20180325031424) do
     t.string "linked_in"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "founded_year"
+    t.integer "employee_count"
+    t.boolean "raised_money"
   end
 
   create_table "entity_categories", force: :cascade do |t|
@@ -72,11 +62,6 @@ ActiveRecord::Schema.define(version: 20180325031424) do
     t.datetime "updated_at", null: false
     t.index ["entity_id"], name: "index_entity_stages_on_entity_id"
     t.index ["stage_id"], name: "index_entity_stages_on_stage_id"
-  end
-
-  create_table "events", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "stages", force: :cascade do |t|

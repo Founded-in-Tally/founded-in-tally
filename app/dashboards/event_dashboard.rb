@@ -1,0 +1,2 @@
+class EventDashboard < EntityDashboard
+end

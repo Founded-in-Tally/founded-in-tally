@@ -1,0 +1,2 @@
+class ContributorDashboard < EntityDashboard
+end
