@@ -26,78 +26,6 @@
 
     <meta name="author" content="founded-in-tally" />
     <link rel="apple-touch-icon-precomposed" href="/assets/images/avatar.png' %>" />
-    <%= stylesheet_link_tag 'default.css', media: 'all', 'data-turbolinks-track': reload %>
-		<%= stylesheet_link_tag 'component.css', media: 'all', 'data-turbolinks-track': reload %>
-		<%= stylesheet_link_tag 'normalize.css', media: 'all', 'data-turbolinks-track': reload %>
-		<%= stylesheet_link_tag 'component_min_form.css', media: 'all', 'data-turbolinks-track': reload %>
-    <%= stylesheet_link_tag 'font-awesome.min.css', media: 'all', 'data-turbolinks-track': reload %>
-
-    <!-- <link rel="apple-touch-icon-precomposed" href="http://foundedinnorway.com/static/images/fin_logo.png" /> -->
-
-    <!-- <%= stylesheet_link_tag    'default', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag    'component', media: 'all', 'data-turbolinks-track': 'reload' %>
-
-    <link rel="stylesheet" type="text/css" href="/static/css/default.css" />
-    <link rel="stylesheet" type="text/css" href="/static/css/component.css" /> -->
-
-    <!-- <link rel="stylesheet" href="/static/css/font-awesome.min.css"> -->
-
-    <!-- Min form -->
-    <!-- <link rel="stylesheet" type="text/css" href="/static/css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="/static/css/component_min_form.css" /> -->
-
-    <style type="text/css">
-      body{
-        background-color: #2DA6CE !important;
-      }
-
-      .cbp-rfgrid {
-        margin: 0 auto;
-      }
-
-      .cbp-rfgrid li a div {
-        background: rgba(255, 178, 45, 0.5) !important;
-      }
-      .container .featured-title {
-        background-color: #2DA6CE !important;
-      }
-
-      .cbp-spmenu {
-          background: #2DA6CE !important;
-      }
-
-      .cbp-spmenu h3 {
-          color: #fff;
-          background: none;
-      }
-
-      .cbp-spmenu a {
-          color: #fff;
-      }
-
-      .cbp-spmenu a:hover {
-          background: none;
-      }
-
-
-        .cbp-spmenu a {
-            background: #ffb22d !important;
-            color: #fff;
-        }
-
-
-        .cbp-spmenu a:active {
-            background: #ffb22d !important;
-            opacity: 0.5;
-            color: #fff;
-        }
-    </style>
-
-    <%= javascript_include_tag 'modernizr.custom.js', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'modernizr.custom_min_form.js', 'data-turbolinks-track': 'reload' %>
-
-    <!-- <script src="/static/js/modernizr.custom.js"></script> -->
-    <!-- <script type="text/javascript" src="/static/js/modernizr.custom_min_form.js"></script> -->
   </head>
 
   <body class="cbp-spmenu-push">
@@ -106,13 +34,14 @@
       <a href="/about">About&nbsp;the&nbsp;initiative</a>
       <a href="mailto:">Contact</a>
 
-      <!-- <a class="typeform-share link" href="https://weekly.typeform.com/to/HHO2Uc" data-mode="2" target="_blank">Join&nbsp;the&nbsp;list</a>
-      <a href="https://drive.google.com/folderview?id=0B7rp4qZAI1DoN3haMk0zTHA4aTg&amp;usp=sharing" target="_blank">Press&nbsp;kit&nbsp;&nbsp;<i class="fa fa-external-link" style="font-size:14px;"></i></a>
+      <!--
       <a href="faq">FAQ</a>
-      <a href="advertise">Advertise</a>
-      <a href="http://foundedinholland.spreadshirt.nl/" target="_blank">Shop&nbsp;&nbsp;<i class="fa fa-external-link" style="font-size:14px;"></i></a>
-      <a href="mailto:join@foundedinholland.com" target="_blank">Contact</a> -->
-      <a href="http://foundedx.com" target="_blank">Founded&nbsp;X&nbsp;&nbsp;<i class="fa fa-external-link" style="font-size:14px;"></i></a>
+      <a href="mailto:join@foundedintally.com" target="_blank" rel="nofollow">Contact</a>
+      -->
+      <a href="http://foundedx.com" target="_blank" rel="nofollow">
+          Founded X
+          <i class="fa fa-external-link" style="font-size:14px;"></i>
+      </a>
     </nav>
     <a id="showRightPush" class="toggle-menu menu-right push-body menu-icon jPushMenuBtn menu-active"><i class="fa fa-bars"></i></a>
     <div class="container">
@@ -123,9 +52,9 @@
 
     <!-- scripts -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
 
-    <script type="text/javascript" src="/static/js/jPushMenu.js"></script>
+    <!-- <script type="text/javascript" src="/static/js/jPushMenu.js"></script> -->
     <script>
       jQuery(document).ready(function($) {
         $('.toggle-menu').jPushMenu();
@@ -169,8 +98,8 @@
     </script>
 
     <!-- Min form -->
-    <script src="/static/js/classie.js"></script>
-    <script src="/static/js/stepsForm.js"></script>
+    <!-- <script src="/static/js/classie.js"></script>
+    <script src="/static/js/stepsForm.js"></script> -->
 
     <script>
       var theForm = document.getElementById( 'join_form' );
@@ -254,7 +183,7 @@
     <!-- Smooth Scroll -->
     <script>
     $(function() {
-      $('a[href*=#]:not([href=#])').click(function() {
+      $('a[href*="#"]:not([href="#"])').click(function() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
         var target = $(this.hash);
         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');

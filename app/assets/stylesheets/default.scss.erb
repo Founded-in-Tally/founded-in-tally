@@ -3,11 +3,11 @@
 
 @font-face {
 	font-family: 'fontawesome';
-	src:url('/static/fonts/fontawesome.eot');
-	src:url('/static/fonts/fontawesome.eot?#iefix') format('embedded-opentype'),
-		url('./static/fonts/fontawesome.svg#fontawesome') format('svg'),
-		url('/static/fonts/fontawesome.woff') format('woff'),
-		url('/static/fonts/fontawesome.ttf') format('truetype');
+	src:url('<%= asset_path('fontawesome-webfont.eot') %>');
+	src:url('<%= asset_path('fontawesome-webfont.eot?#iefix') %>') format('embedded-opentype'),
+		url('<%= asset_path('fontawesome-webfont.svg#fontawesome') %>') format('svg'),
+		url('<%= asset_path('fontawesome-webfont.woff') %>') format('woff'),
+		url('<%= asset_path('fontawesome-webfont.ttf') %>') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -305,6 +305,10 @@ a.no-link {
 .logo_filler{
 	width: 150px;
 	height: 150px;
+}
+
+.no-list {
+	list-style: none;
 }
 
 @media screen and (min-width: 769px) {

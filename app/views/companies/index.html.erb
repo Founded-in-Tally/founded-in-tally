@@ -14,7 +14,7 @@
 
 
   <div class="clearfix header_text">
-    Hello, welcome to Founded in Tallahassee, this is the intro section, you can include valid html here such as <a href="http://foundedx.com" target="_blank">links</a>.
+    Hello, welcome to Founded in Tallahassee, this is the intro section, you can include valid html here such as <a href="http://foundedx.com" target="_blank" rel="nofollow">links</a>.
   </div>
 
   <span class="apply">Want to join this list? <a href="#join">Submit&nbsp;your&nbsp;startup.</a></span>
@@ -35,78 +35,36 @@
 <br />
 
 <ul class="cbp-rfgrid">
-  <li><a href="http://bit.ly/3dhubs-fih" target="_blank"><img src="static/images/Partner-badge.png"><div><h3>3D Hubs</h3></div></a></li>
-  <li><a href="http://bit.ly/3dhubs-fih" target="_blank"><img src="static/images/Partner-badge.png"><div><h3>3D Hubs</h3></div></a></li>
-  <li><a href="http://bit.ly/3dhubs-fih" target="_blank"><img src="static/images/Partner-badge.png"><div><h3>3D Hubs</h3></div></a></li>
-  <li><a href="http://bit.ly/3dhubs-fih" target="_blank"><img src="static/images/Partner-badge.png"><div><h3>3D Hubs</h3></div></a></li>
-  <li><a href="http://bit.ly/3dhubs-fih" target="_blank"><img src="static/images/Partner-badge.png"><div><h3>3D Hubs</h3></div></a></li>
+  <%- 5.times do %>
+  <li>
+    <a href="http://bit.ly/3dhubs-fih" target="_blank" rel="nofollow">
+      <%= image_tag 'foundedx-badge.png', alt: 'Part of Founded X' %>
+      <div><h3>3D Hubs</h3></div>
+    </a>
+  </li>
+  <% end %>
 </ul>
 
 <div class="join-box">
   <a name="join" class="no-link"></a>
-    <span class="join-box-span">
-      <strong>What do all these companies have in common?</strong>
-      <ol class="no-list">
-        <li>1) Something</li>
-        <li>2) Soemthing else</li>
-        <li>3) Another thing</li>
-      </ol>
+  <span class="join-box-span">
+    <strong>What do all these companies have in common?</strong>
+    <ol class="no-list">
+      <li>1) Something</li>
+      <li>2) Something else</li>
+      <li>3) Another thing</li>
+    </ol>
 
-      Does your startup meet these criteria and do you want to support this initiative?<br>
+    Does your startup meet these criteria and do you want to support this initiative?<br>
 
-      <strong>Submit your startup by joining below.</strong>
+    <strong>Submit your startup by joining below.</strong>
 
-      <br /><br /><br />
+    <br /><br /><br />
 
-      <h2>Startups</h2>
-      <a id="join_list" class="link join-button" href="#">Join&nbsp;the&nbsp;list</a>
-      <div id="form_container" class="transition">
-
-        <form id="join_form" class="simform" autocomplete="off">
-          <div class="simform-inner">
-            <ol class="questions">
-              <li>
-                <span><label for="q1">Startup name*</label></span>
-                <input id="q1" name="q1" type="text" data-validate="yes"/>
-              </li>
-              <li>
-                <span><label for="q2">Year founded*</label></span>
-                <input id="q2" name="q2" type="text" data-validate="yes"/>
-              </li>
-              <li>
-                <span><label for="q3">Web address*</label></span>
-                <input id="q3" name="q3" type="text" placeholder="http://" data-validate="yes"/>
-              </li>
-              <li>
-                <span><label for="q4">Twitter handle</label></span>
-                <input id="q4" name="q4" type="text" placeholder="eg. @wearesupernice"/>
-              </li>
-              <li>
-                <span><label for="q5">URL to high resolution (preferably white) logo*</label></span>
-                <input id="q5" name="q5" type="text" placeholder="http://" data-validate="yes"/>
-              </li>
-              <li>
-                <span><label for="q6">Contact person* (their name will not be published)</label></span>
-                <input id="q6" name="q6" type="text" data-validate="yes"/>
-              </li>
-              <li>
-                <span><label for="q7">email (optional, but nice to stay updated)</label></span>
-                <input id="q7" name="q7" type="email" data-validate=""/>
-              </li>
-            </ol><!-- /questions -->
-            <button class="submit" type="submit">Join</button>
-            <div class="controls">
-              <button class="next"></button>
-              <div class="progress"></div>
-              <span class="number">
-                <span class="number-current"></span>
-                <span class="number-total"></span>
-              </span>
-              <span class="error-message"></span>
-            </div><!-- / controls -->
-          </div><!-- /simform-inner -->
-        <span class="final-message"></span>
-      </form><!-- /simform -->
+    <h2>Startups</h2>
+    <a id="join_list" class="link join-button" href="#">Join&nbsp;the&nbsp;list</a>
+    <div id="form_container" class="transition">
+      <%= render partial: 'companies/form', locals: { company: Company.new } %>
     </div>
   </span>
 
@@ -118,7 +76,7 @@
     <a href="/about">
       About&nbsp;the&nbsp;initiative
     </a> &nbsp;&middot;&nbsp;
-    <a href="mailto:" target="_blank">
+    <a href="mailto:" target="_blank" rel="nofollow">
       Contact
     </a>
   </span>
@@ -163,6 +121,6 @@
   <span></span>
 
   <a href="http://foundedx.com" class="no-link">
-    <img src="/static/images/foundedx-badge.png" alt="Part of Founded X">
+    <%= image_tag 'foundedx-badge.png', alt: 'Part of Founded X' %>
   </a>
 </footer>

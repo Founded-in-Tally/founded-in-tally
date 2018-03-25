@@ -1,0 +1,53 @@
+<form id="join_form" class="simform" autocomplete="off">
+  <div class="simform-inner">
+
+    <ol class="questions">
+      <li>
+        <span><label for="q1">Startup name*</label></span>
+        <input id="q1" name="q1" type="text" data-validate="yes"/>
+      </li>
+      <li>
+        <span><label for="q2">Year founded*</label></span>
+        <input id="q2" name="q2" type="text" data-validate="yes"/>
+      </li>
+      <li>
+        <span><label for="q3">Web address*</label></span>
+        <input id="q3" name="q3" type="text" placeholder="http://" data-validate="yes"/>
+      </li>
+      <li>
+        <span><label for="q4">Twitter handle</label></span>
+        <input id="q4" name="q4" type="text" placeholder="e.g., @wearesupernice"/>
+      </li>
+      <li>
+        <span><label for="q5">URL to high resolution (preferably white) logo*</label></span>
+        <input id="q5" name="q5" type="text" placeholder="http://" data-validate="yes"/>
+      </li>
+      <li>
+        <span><label for="q6">Contact person* (their name will not be published)</label></span>
+        <input id="q6" name="q6" type="text" data-validate="yes"/>
+      </li>
+      <li>
+        <span><label for="q7">email (optional, but nice to stay updated)</label></span>
+        <input id="q7" name="q7" type="email" data-validate=""/>
+      </li>
+    </ol><!-- /questions -->
+
+    <button class="submit" type="submit">Join</button>
+
+    <div class="controls">
+      <button class="next"></button>
+
+      <div class="progress"></div>
+
+      <span class="number">
+        <span class="number-current"></span>
+        <span class="number-total"></span>
+      </span>
+
+      <span class="error-message"></span>
+    </div><!-- / controls -->
+
+  </div><!-- /simform-inner -->
+
+  <span class="final-message"></span>
+</form><!-- /simform -->
