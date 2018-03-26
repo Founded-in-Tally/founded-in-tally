@@ -30,9 +30,9 @@ Website to be used for [Founded in Tally](http://foundedintally.com).
 1. Configure app
     * Set the Rails env to use for configuration with `export RAILS_ENV=development`
     * ...
-1. Run `rake db:create db:migrate db:seed` to create the database, run migrations, and seed with initial data
-    * To start from scratch, either `rake db:drop` then the above, or `rake db`
-    * For additional migrations, just run `rake db:migrate`
+1. Run `rake db:create` to create the database, `rake db:migrate` to run migrations, and `rake db:seed` to seed with initial data (these can also be run in a single line as `rake db:create db:migrate db:seed`)
+    * To reset the database, either run `rake db:drop` to drop the database (then repeat the commands above), or run `rake db:reset` to reload from the existing schema (then run the seed command)
+    * To run additional migrations on the existing database, run `rake db:migrate`
 1. Run `rails server` (or `rails s`) to run the Rails server
 1. Go to [http://localhost:3000](http://localhost:3000) for the front-end and [http://localhost:3000/admin](http://localhost:3000/admin) for the administrator interface
 
@@ -76,7 +76,7 @@ $ psql
 
 ### Install Ruby/Rails
 
-... <!-- TODO -->
+_TODO_
 
 ## License
 
@@ -86,8 +86,7 @@ Portions of this software are copyright of their own owners as described in the 
 
 ## TODO
 
-- Models
-- Form to submit company (startup)
+- Form to submit company/startup (in progress)
 - Form to submit contributor
 - Form to submit events
 - Load and display companies on index
@@ -97,4 +96,4 @@ Portions of this software are copyright of their own owners as described in the 
 - CONTENT/COPY to pages
 - Deploy to Heroku
 - (Admin user creation)
-- Companies input (admin)
+- Data input (admin)
