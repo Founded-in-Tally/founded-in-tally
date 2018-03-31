@@ -1,66 +1,105 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>We're sorry, but something went wrong (500)</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
-  .rails-default-error-page {
-    background-color: #EFEFEF;
-    color: #2E2F30;
-    text-align: center;
-    font-family: arial, sans-serif;
-    margin: 0;
-  }
+  <head>
+    <title>Founded in Tally - Error 500</title>
 
-  .rails-default-error-page div.dialog {
-    width: 95%;
-    max-width: 33em;
-    margin: 4em auto 0;
-  }
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Founded in Tally showcases startups with roots in Tallahasse and provides resources for budding entrepreneurs." />
+    <meta name="keywords" content="Tallahassee, Tally, TLH, Florida, FL, startups, entrepreneurs, innovation" />
 
-  .rails-default-error-page div.dialog > div {
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    background-color: white;
-    padding: 7px 12% 0;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
+    <meta property="og:title" content="Founded in Tally" />
+    <meta property="og:description" content="Founded in Tally showcases startups with roots in Tallahasse and provides resources for budding entrepreneurs." />
+    <meta property="og:site_name" content="Founded in Tally" />
+    <meta property="og:image" content="/assets/images/avatar.png" />
+    <meta property="og:type" content="website" />
 
-  .rails-default-error-page h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
-  }
+    <!-- <meta name="twitter:site" content="@foundedtally" /> -->
+    <meta name="twitter:title" content="Founded in Tally" />
 
-  .rails-default-error-page div.dialog > p {
-    margin: 0 0 1em;
-    padding: 1em;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
-  </style>
-</head>
+    <link rel="shortcut icon" href="assets/images/favicon.png" />
 
-<body class="rails-default-error-page">
-  <!-- This file lives in public/500.html -->
-  <div class="dialog">
-    <div>
-      <h1>We're sorry, but something went wrong.</h1>
+    <meta name="author" content="founded-in-tally" />
+    <link rel="apple-touch-icon-precomposed" href="/assets/images/avatar.png" />
+
+    <link rel="stylesheet" type="text/css" href="http://foundedinflorida.com/static/css/default.css" />
+    <link rel="stylesheet" type="text/css" href="http://foundedinflorida.com/static/css/component.css" />
+    <!-- <link rel="stylesheet" href="http://foundedinflorida.com/static/css/font-awesome.min.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="http://foundedinflorida.com/static/css/normalize.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="http://foundedinflorida.com/static/css/component_min_form.css" />   -->
+
+    <style type="text/css">
+      body {
+        background-color: #FFF !important;
+      }
+      .capital, .header_text, a {
+        color: red;
+      }
+      .header_text a:hover {
+        color: #FFF;
+        background-color: rgba(255, 0, 0, 0.75);
+      }
+      .container .featured-title {
+        background-color: #FFF !important;
+      }
+
+      .cbp-spmenu {
+          background: #FFF !important;
+      }
+
+      .cbp-spmenu h3 {
+          color: red;
+          background: none;
+      }
+
+      .cbp-spmenu a {
+          color: red;
+      }
+
+      .cbp-spmenu a:hover {
+          background: none;
+      }
+
+        .cbp-spmenu a {
+            background: #FFF !important;
+            color: red;
+        }
+
+        .cbp-spmenu a:active {
+            background: #FFF !important;
+            opacity: 0.5;
+            color: red;
+        }
+
+        .container .featured-line {
+          margin-bottom: 0.5em;
+          border-top: 0.1em solid red;
+        }
+    </style>
+  </head>
+
+  <body class="cbp-spmenu-push">
+    <div class="container">
+
+      <header class="clearfix">
+        <div class="clearfix">
+
+          <div class="logo_container">
+            <span class="capital">We're sorry, but something went wrong.</span>
+          </div>
+
+          <div class="logo_container">
+            <div class="featured-line"></div>
+
+            <div class="clearfix header_text">
+              If the problem persists, please contact <a href="mailto:dom@act.house">dom@act.house</a>
+            </div>
+          </div>
+
+        </div>
+      </header>
+
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
-  </div>
-</body>
+  </body>
 </html>
