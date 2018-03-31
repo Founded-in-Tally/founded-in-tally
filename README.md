@@ -24,59 +24,42 @@ Website to be used for [Founded in Tally](http://foundedintally.com).
 
 ## Setup
 
-1. Install and configure PostgreSQL
+1. Install PostgreSQL
 1. Install Ruby/Rails
 1. In project root, run `bundle install` to install required gems
 1. Configure app
     * Set the Rails env to use for configuration with `export RAILS_ENV=development`
     * ...
-1. Run `rake db:create db:migrate db:seed` to create the database, run migrations, and seed with initial data
-    * To start from scratch, either `rake db:drop` then the above, or `rake db`
-    * For additional migrations, just run `rake db:migrate`
+1. Set up database 
+    * To create the database: `rake db:create`
+    * To run migrations: `rake db:migrate`
+    * To seed initial data: `rake db:seed`
+    * To reset the database, either run `rake db:drop` to drop the database (then repeat the commands above), or run `rake db:reset` to reload from the existing schema (then re-run the seed command)
+    * NOTE: multiple commands can be called in a single line, e.g., `rake db:create db:migrate db:seed`
 1. Run `rails server` (or `rails s`) to run the Rails server
 1. Go to [http://localhost:3000](http://localhost:3000) for the front-end and [http://localhost:3000/admin](http://localhost:3000/admin) for the administrator interface
 
 
-### Install and Configure PostgreSQL
+### Install PostgreSQL
 
 #### MacOS
 
-1. Install and start PostgreSQL (alternatively, [pgAdmin](https://www.pgadmin.org/) is a great utility)
 ```
 $ brew install postgresql
 $ brew services start postgresql
 ```
-
-2. Create the database/user, for example,
-```
-$ psql
-#= create database founded_in_tally;
-#= create user tally_user;
-#= alter user tally_user with encrypted password "tally_password";
-#= grant all privileges on database founded_in_tally to tally_user;
-```
+(Alternatively, [pgAdmin](https://www.pgadmin.org/) is a great utility.)
 
 #### Linux / Ubuntu
 
-1. Install PostgreSQL
-  ```
-  sudo apt-get install postgresql postgresql-contrib pgadmin3
-  ```
-
-2. Create a database user with full rights on it
-  ```
-  sudo -u postgres createuser -D -A -P myuser
-  sudo -u postgres createdb -O myuser mydb
-  ```
-
-3. Restart the PostgreSQL server
-  ```
-  sudo /etc/init.d/postgresql restart
-  ```
+```
+$ sudo apt-get install postgresql postgresql-contrib pgadmin3
+$ sudo /etc/init.d/postgresql restart
+```
 
 ### Install Ruby/Rails
 
-... <!-- TODO -->
+_TODO_
 
 ## License
 
@@ -86,8 +69,7 @@ Portions of this software are copyright of their own owners as described in the 
 
 ## TODO
 
-- Models
-- Form to submit company (startup)
+- Form to submit company/startup (in progress)
 - Form to submit contributor
 - Form to submit events
 - Load and display companies on index
@@ -97,4 +79,4 @@ Portions of this software are copyright of their own owners as described in the 
 - CONTENT/COPY to pages
 - Deploy to Heroku
 - (Admin user creation)
-- Companies input (admin)
+- Data input (admin)
